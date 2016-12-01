@@ -46,7 +46,7 @@ public class Player extends GameObject{
 
     @Override
     public void draw(Graphics g) {
-       g.drawImage(img,x,y,width,height,null); 
+       g.drawImage(img,x,y,width,height,null); //draw player
     }
     
     public void reset(){ //reset both players to starting position

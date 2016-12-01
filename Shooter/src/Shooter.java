@@ -43,8 +43,8 @@ public class Shooter extends Canvas implements Runnable, KeyListener{
         frame.setResizable(false); //Do not allow to resize
         
         new Cache();
-        player1 = new Player(10, 150, 20, 90, Cache.player1); 
-        player2 = new Player(570, 150, 20, 90, Cache.player2);
+        player1 = new Player(10, 150, 20, 90, Cache.player1); //Create player 1
+        player2 = new Player(570, 150, 20, 90, Cache.player2); //Create player 2
         
         frame.add(this); //Add Canvas to frame object
         thread = new Thread(this); //send Shooter object
@@ -103,9 +103,9 @@ public class Shooter extends Canvas implements Runnable, KeyListener{
         }
 }
     public void render(){
-        graphics.clearRect(0, 0, WIDTH, WIDTH);
+        graphics.clearRect(0, 0, WIDTH, HEIGHT); //Clear frame every frame
         
-        graphics.setColor(Color.black);
+        graphics.setColor(Color.black); //set background to black
         graphics.fillRect(0, 0, WIDTH, HEIGHT);
        
         graphics.setColor(Color.red);
@@ -126,12 +126,12 @@ public class Shooter extends Canvas implements Runnable, KeyListener{
         player2.draw(graphics);
         
         for (Bullet bullet: bullets){
-            bullet.draw(graphics);
+            bullet.draw(graphics); //draw each bullet on the screen
         }
 }
     
     public static void main(String[] args){
-       INSTANCE = new Shooter();
+       INSTANCE = new Shooter(); //create an INSTANCE of shooter
     }
 
     @Override
@@ -153,7 +153,7 @@ public class Shooter extends Canvas implements Runnable, KeyListener{
                 player2.down=true;
             }
         } else{
-            if (e.getKeyCode() == KeyEvent.VK_N){
+            if (e.getKeyCode() == KeyEvent.VK_N){ //reset the game if N is pressed
                 resetGame();
             }
         }
@@ -198,19 +198,19 @@ public class Shooter extends Canvas implements Runnable, KeyListener{
     }
     
         public Player getPlayer1(){
-            return player1;
+            return player1; //returns player 1 object
         }
         
         public Player getPlayer2(){
-            return player2;
+            return player2; //returns player 2 object
         }
         
         public List<Bullet> getBullets(){
-            return bullets;
+            return bullets; //returns bullets
         }
         
         public static Shooter getInstance(){
-            return INSTANCE;
+            return INSTANCE; //returns INSTANCE of Shooter
         }
        
     }

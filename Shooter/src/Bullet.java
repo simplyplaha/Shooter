@@ -21,8 +21,8 @@ public class Bullet extends GameObject{
 
     @Override
     public void update() {
-       x = x+ deltaX;
-       rect.x+=deltaX;
+       x = x+ deltaX; //update the bullet cords
+       rect.x+=deltaX; //update hitbox
        
        if (Shooter.getInstance().getPlayer1().rect.contains(this.rect)){
             Shooter.getInstance().getPlayer1().health--; //subtract player 1's health
