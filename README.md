@@ -7,8 +7,8 @@ Down: D
 Shoot: Space Bar
 
 Player 2:
-Up: Up Arrow
-Down: Down Arrow
+Up: (Up Arrow)
+Down: (Down Arrow)
 Shoot: Enter
 
 To start a new game, press N after the game ends.
