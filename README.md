@@ -5,8 +5,8 @@ Down: D
 Shoot: Space Bar
 
 Player 2 Controls:
-Up: Up arrow
-Down: Down arrow
+Up: Up Arrow
+Down: Down Arrow
 Shoot: Enter
 
 Enjoy!
